@@ -1,0 +1,13 @@
+{
+    "_id": "",
+    "Name": "AwesomeEvent",
+    "Description": "My new awesome event Unity\nIt is the best event",
+    "Users": [],
+    "Created": "",
+    "Type": "PARTY",
+    "Catering": true,
+    "Catering_Desc": "Free sausage",
+    "Date": "05-69-2174",
+    "Location": "My place",
+    "Ratings": []
+}

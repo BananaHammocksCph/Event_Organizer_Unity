@@ -1,0 +1,12 @@
+{
+    "Id": "",
+    "Description": "Event description text",
+    "Users": [],
+    "Created": "12/9/2019 1:06:36 PM",
+    "Event_Type": "Party",
+    "Catering": true,
+    "Catering_Desc": "Fancy schmancy fooood",
+    "Date": "12.07.2020",
+    "Location": "At my place",
+    "Ratings": []
+}
