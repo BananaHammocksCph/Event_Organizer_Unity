@@ -73,7 +73,7 @@ public class UserController : MonoBehaviour
     {
         User = new User
         {
-            Name = u_Name.text,
+          //  Name = u_Name.text,
             Email = u_Email.text,
             Password = u_Password.text
         };

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Farki/Scenes/EventOrganizer.unity
+    guid: 945d36cadd4336d4dae86d03156a31e5
   m_configObjects: {}

@@ -43,29 +43,36 @@ public class RestController : MonoBehaviour
     {
         RestClient.Post(_baseURL + "/events", _event).Then(res =>
         {
-            Debug.Log(res.StatusCode);
+            FindObjectOfType<FeedbackMessage>().ShowFeedback("Event Created!");
         });
     }
 
     public void PostLogin(User _user)
     {
         RestClient.Post<UserResponse>(_baseURL + "/login", _user).Then(res =>{
-            
-        if (res.data != null)
+            Debug.Log("EM: " + res.data.Email);
+            UserController _uc = FindObjectOfType<UserController>();
+
+        if (res.data.Email == _uc.User.Email && res.data.Password == _uc.User.Password)
             {
                 IsValidLogin = true;
                 userId.Id =  res.data._id ;
             }
 
             else IsValidLogin = false;
+
+
+            _updatedValue = true;
         });
 
-        _updatedValue = true;
     }
 
     public void PostRegister(User _user)
     {
-        RestClient.Post(_baseURL + "/users", _user);
+        RestClient.Post(_baseURL + "/users", _user).Then(res=> {
+            FindObjectOfType<FeedbackMessage>().ShowFeedback("User Registered");
+        });
+
     }
 
     /// <summary>

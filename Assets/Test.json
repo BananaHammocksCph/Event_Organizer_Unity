@@ -1,13 +1,13 @@
 {
     "_id": "",
-    "Name": "AwesomeEvent",
-    "Description": "My new awesome event Unity\nIt is the best event",
+    "Name": "Exam",
+    "Description": "We are going to ace this exam\nnext week thursday",
     "Users": [],
     "Created": "",
-    "Type": "PARTY",
+    "Type": "LECTURE",
     "Catering": true,
-    "Catering_Desc": "Free sausage",
-    "Date": "05-69-2174",
-    "Location": "My place",
+    "Catering_Desc": "I want my Pizza",
+    "Date": "12-19-2019",
+    "Location": "School",
     "Ratings": []
 }
