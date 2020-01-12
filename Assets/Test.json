@@ -1,13 +1,13 @@
 {
     "_id": "",
-    "Name": "Exam",
-    "Description": "We are going to ace this exam\nnext week thursday",
+    "Name": "Test",
+    "Description": "This is a test",
     "Users": [],
     "Created": "",
-    "Type": "LECTURE",
+    "Type": "MEETING",
     "Catering": true,
-    "Catering_Desc": "I want my Pizza",
-    "Date": "12-19-2019",
-    "Location": "School",
+    "Catering_Desc": "Food",
+    "Date": "01-10-1993",
+    "Location": "home",
     "Ratings": []
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Proyecto26;
-using System;
+using System.Linq;
 using UnityEditor;
 
 public class RestController : MonoBehaviour
@@ -106,5 +106,44 @@ public class RestController : MonoBehaviour
 
         RestClient.Post(eventRoute, userId);
         GetAllUsersFromEvent(eventId);
+    }
+
+    public void PostRating(string eventId, Rating _rating)
+    {
+        var ratingRoute = _baseURL + "/events/" + eventId + "/ratings";
+
+        RestClient.Post(ratingRoute, _rating);
+    }
+
+    //test
+    //public IEnumerator GetRatings(string eventId)
+    //{
+    //    bool _isPopulated = false;
+    //    var ratingsRoute = _baseURL + "/events/"+ eventId + "/ratings";
+
+    //    List<int> _scores = new List<int>();
+
+    //    RestClient.Get<RatinResponse>(ratingsRoute).Then(res =>
+    //    {
+    //        foreach(Rating r in res.data)
+    //        {
+    //            _scores.Add(r.Score);
+    //        }
+    //        _isPopulated = true;
+    //    });
+
+    //    yield return new WaitUntil(() => _isPopulated);
+
+    //    double _avg = _scores.Average();
+    //    FindObjectOfType<EventInformationDisplayer>().GetAvgRating(_avg);
+    //}
+
+    public void GetAllRating(string eventId)
+    {
+        var ratingsRoute = _baseURL + "/events/" + eventId + "/ratings";
+        RestClient.Get<RatinResponse>(ratingsRoute).Then(res =>
+        {
+            FindObjectOfType<EventInformationDisplayer>().GetAllRatings(res.data);
+        });
     }
 }

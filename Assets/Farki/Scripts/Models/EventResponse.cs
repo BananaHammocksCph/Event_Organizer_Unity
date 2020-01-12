@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 [Serializable]
 public class EventResponse
@@ -25,4 +26,11 @@ public class E_User
 public class UID
 {
     public string Id;
+}
+
+[Serializable]
+public class RatinResponse
+{
+    public string status;
+    public Rating[] data;
 }
