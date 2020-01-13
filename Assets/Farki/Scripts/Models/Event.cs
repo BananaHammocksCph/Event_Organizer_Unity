@@ -4,6 +4,7 @@
 public class Event 
 {
     public string _id;
+    public string email;
     public string Name;
     public string Description;
     public User[] Users;

@@ -1,13 +1,14 @@
 {
     "_id": "",
+    "email": "if@farki.com",
     "Name": "Test",
-    "Description": "This is a test",
+    "Description": "Event with no Catering",
     "Users": [],
     "Created": "",
     "Type": "MEETING",
-    "Catering": true,
-    "Catering_Desc": "Food",
-    "Date": "01-10-1993",
-    "Location": "home",
+    "Catering": false,
+    "Catering_Desc": "",
+    "Date": "10-11-2020",
+    "Location": "skewl",
     "Ratings": []
 }

@@ -8,4 +8,5 @@ public class Rating
     public string Created;
     public double lat;
     public double lon;
+    public string ip;
 }

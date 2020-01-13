@@ -99,6 +99,7 @@ public class EventHelper : MonoBehaviour
             Description = e_Description.text,
             Type = e_Type.options[e_Type.value].text,
             Catering = _isCatering,
+            email = FindObjectOfType<UserController>().User.Email,
         //    Created = DateTime.Now.ToString("DD-mm-YYYY"),
             Catering_Desc = c_Description.text,
             Location = e_Location.text,

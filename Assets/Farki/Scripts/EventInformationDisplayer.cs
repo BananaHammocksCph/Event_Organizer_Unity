@@ -86,7 +86,8 @@ public class EventInformationDisplayer : MonoBehaviour
         {
             Score = _ratingDropdown.value,
             lat = _locationHandler.Latitude,
-            lon = _locationHandler.Longitude
+            lon = _locationHandler.Longitude,
+            ip = FindObjectOfType<IpHelper>().GetExternalIp()
         };
 
         _restController.PostRating(_currentEvent._id, _rating);
@@ -110,6 +111,7 @@ public class EventInformationDisplayer : MonoBehaviour
 
         e_Rating.text = _scores.Average().ToString("0.00");
     }
+
 
     public void OnExit()
     {

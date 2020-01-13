@@ -112,7 +112,20 @@ public class RestController : MonoBehaviour
     {
         var ratingRoute = _baseURL + "/events/" + eventId + "/ratings";
 
-        RestClient.Post(ratingRoute, _rating);
+        RestClient.Post(ratingRoute, _rating).Then(res =>
+        {
+            Debug.Log("RATING RES: " + res.Text);
+
+            FeedbackMessage _feedbackMessage = FindObjectOfType<FeedbackMessage>();
+            if (res.Text.Contains("400"))
+            {
+                _feedbackMessage.ShowFeedback("Invalid location");
+            }
+            else
+            {
+                _feedbackMessage.ShowFeedback("Rating Successful");
+            }
+        });
     }
 
     //test

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LocationHandler : MonoBehaviour
 {
-    double _longitude, _latitude;
+    [SerializeField] private double _longitude, _latitude;
 
 
     public double Longitude
@@ -25,8 +25,8 @@ public class LocationHandler : MonoBehaviour
         //Debug
 #if UNITY_EDITOR
 
-        _longitude = 12.462724;
-        _latitude = 55.638539;
+        //_longitude = 12.462724;
+        //_latitude = 55.638539;
 
 #endif
     }
